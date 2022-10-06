@@ -1,4 +1,31 @@
 # Coding Challenge
+## Developer Notes: 
+### Changes to provided code
+- In gradle/wrapper/gradle-wrapper.properties I switched the gradle version to 7.3 to run better with my personal development environment. 
+
+- Report route returns object: 
+  `{"employee": <Employee Obj>, "numberOfReports": <Integer>}`
+
+- Compensation route returns object: 
+  `{"employee": <Employee Obj>, "salary": <Integer>, "effectiveDate": <String>}`
+
+- Additionally, the following files were added: 
+  - ~/controller
+    - CompensationController.java
+    - ReportingStructureController.java
+  - ~/dao
+    - CompensationRepository.java 
+  - ~/data
+    - Compensation.java
+    - ReportingStructure.java
+  - ~/service
+    - ~/service/impl
+      - CompensationServiceImpl.java
+      - ReportingStructureServiceImpl.java
+    - CompensationService.java
+    - ReportingStructureService.java
+
+
 ## What's Provided
 A simple [Spring Boot](https://projects.spring.io/spring-boot/) web application has been created and bootstrapped 
 with data. The application contains information about all employees at a company. On application start-up, an in-memory 
@@ -6,7 +33,7 @@ Mongo database is bootstrapped with a serialized snapshot of the database. While
 accessed and mutated in the database without impacting the snapshot.
 
 ### How to Run
-The application may be executed by running `gradlew bootRun`.
+The application may be executed by running ` `.
 
 ### How to Use
 The following endpoints are available to use:
@@ -55,7 +82,7 @@ The Employee has a JSON schema of:
 ```
 For all endpoints that require an "id" in the URL, this is the "employeeId" field.
 
-## What to Implement
+## What to Implement 
 Clone or download the repository, do not fork it.
 
 ### Task 1
